@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphing Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Graphing Calculator</h1>
+        <input type="text" id="function-input" placeholder="Enter a function, e.g., sin(x), 2*x**2 + 3*x + 1, etc.">
+        <button onclick="plotFunction()">Plot Function</button>
+    </div>
+    <div id="graph"></div>
+</body>
+</html>
